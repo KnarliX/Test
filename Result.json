@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Janvi",
+    "roll_number": "138707",
+    "roll_code": "1023",
+    "total_marks": 432,
+    "result_status": "Pass"
+  },
+  {
+    "name": "KnarliX",
+    "roll_number": "138708",
+    "roll_code": "1023",
+    "total_marks": 299,
+    "result_status": "Fail"
+  }
+]
