@@ -1,16 +1,66 @@
-[
-  {
-    "name": "Janvi",
-    "roll_number": "138707",
-    "roll_code": "1023",
-    "total_marks": 432,
-    "result_status": "Pass"
-  },
-  {
-    "name": "KnarliX",
-    "roll_number": "138708",
-    "roll_code": "1023",
-    "total_marks": 299,
-    "result_status": "Fail"
-  }
-]
+{
+  "Class 10": [
+    {
+      "name": "Janvi",
+      "roll_number": "1001",
+      "total_marks": 455,
+      "result_status": "Pass"
+    },
+    {
+      "name": "Rohit",
+      "roll_number": "1002",
+      "total_marks": 389,
+      "result_status": "Pass"
+    },
+    {
+      "name": "Sneha",
+      "roll_number": "1003",
+      "total_marks": 423,
+      "result_status": "Pass"
+    },
+    {
+      "name": "Aman",
+      "roll_number": "1004",
+      "total_marks": 278,
+      "result_status": "Fail"
+    },
+    {
+      "name": "KnarliX",
+      "roll_number": "1005",
+      "total_marks": 342,
+      "result_status": "Pass"
+    }
+  ],
+  "Class 12": [
+    {
+      "name": "Poonam",
+      "roll_number": "1201",
+      "total_marks": 389,
+      "result_status": "Pass"
+    },
+    {
+      "name": "Lakshay",
+      "roll_number": "1202",
+      "total_marks": 398,
+      "result_status": "Pass"
+    },
+    {
+      "name": "Sumit",
+      "roll_number": "1203",
+      "total_marks": 231,
+      "result_status": "Fail"
+    },
+    {
+      "name": "Deepak",
+      "roll_number": "1204",
+      "total_marks": 420,
+      "result_status": "Pass"
+    },
+    {
+      "name": "Priya",
+      "roll_number": "1205",
+      "total_marks": 468,
+      "result_status": "Pass"
+    }
+  ]
+}
