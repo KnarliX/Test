@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Finder</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jarvi Status JSON</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 20px;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
 </head>
 <body>
+  <pre id="output">Loading...</pre>
 
-    <div class="container">
-        <h1>Find Your Result</h1>
-        
-        <form id="resultForm">
-            <label for="class">Select Class:</label>
-            <select id="class" required>
-                <option value="">Select Class</option>
-                <option value="Class 10">Class 10</option>
-                <option value="Class 12">Class 12</option>
-            </select>
-            <label for="rollNumber">Enter Roll Number:</label>
-            <input type="number" id="rollNumber" placeholder="Roll Number" required>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <div id="resultData" class="result-data">
-            <!-- Result will be shown here -->
-        </div>
-    </div>
+  <script>
+    const apiKey = 'ur2947253-f5088c902dcce34901b4d8d4'; // ⚠️ Publicly visible
 
-    <script src="script.js"></script>
+    async function fetchUptime() {
+      try {
+        const response = await fetch("https://api.uptimerobot.com/v2/getMonitors", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            api_key: apiKey,
+            format: "json",
+            logs: 1,
+            custom_uptime_ratios: "1-7-30"
+          })
+        });
+
+        const data = await response.json();
+        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        document.getElementById("output").textContent = `Error loading data:\n${err}`;
+      }
+    }
+
+    fetchUptime();
+  </script>
 </body>
 </html>
